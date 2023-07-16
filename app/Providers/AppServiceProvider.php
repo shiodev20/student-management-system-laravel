@@ -2,8 +2,6 @@
 
 namespace App\Providers;
 
-use App\Models\Semester;
-use App\Models\Year;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 

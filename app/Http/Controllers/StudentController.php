@@ -41,7 +41,7 @@ class StudentController extends Controller
   }
 
 
-  public function store(StudentRequest $request) {
+  public function store(StudentRequest $request) {  
 
     try {
       $studentId = GenerateId::generateId('HS', 6);
