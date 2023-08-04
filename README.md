@@ -8,10 +8,10 @@ Link demo: [ShioSMS](https://shiobook-ebook-downloader.tech/)
 - Học sinh
 
 ## Use case Tổng quát
-![ShioSMS-General](markdown/diagram/Guest.png)
+![ShioSMS-General](markdown/diagram/General.png)
 
 ## Use case Actor Giáo vụ
-![ShioSMS-StaffActor](markdown/diagram/Member.png)
+![ShioSMS-StaffActor](markdown/diagram/Staff.png)
 
 ## ERD hệ thống
 ![ShioSMS-ERD](markdown/diagram/ERD.png)
