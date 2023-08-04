@@ -49,13 +49,36 @@
   </div>
 
   <div class="my-4 d-flex justify-content-end align-items-center">
-    <a href="{{ route('password.request') }}" class="auth-link text-black">Quên mật khẩu ?</a>
+    <a data-toggle="modal" data-target="#requireAuthModal" class="auth-link text-black" style="cursor: pointer;">Quên mật khẩu ?</a>
   </div>
 
   <div class="mt-3">
     <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">Đăng nhập</button>
   </div>
- 
+
 </form>
 
+<div class="modal fade" id="requireAuthModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Thông báo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="fs-3 fw-bold">
+          Chức năng "Quên mật khẩu" không hiệu lực ở chế độ này.
+        </div>
+        <div  class="fs-5">
+          Bạn có thể truy cập link demo này để xem mô tả chức năng: <a href="" class="color-main">Link Demo</a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Đóng</button>
+      </div>
+    </div>
+  </div>
+</div>
 @endsection
