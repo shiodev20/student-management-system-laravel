@@ -16,23 +16,29 @@ class AuthController extends Controller
 
   // POST: login
   public function store(Request $request) {
+    $request->validate(
+      [
+        'email' => 'required|email|max:100',
+        'password' => 'required|min:6'
+      ],
+      [
+        'email.required' => 'Email không được bỏ trống',
+        'email.email' => 'Email không phù hợp',
+        'email.max' => 'Email không được vượt quá :max ký tự',
+        'password.required' => 'Mật khẩu không được bỏ trống',
+        'password.min' => 'Mật khẩu từ :min ký tự trở lên',
+      ]
+    );
     try {
-      $formData = $request->validate(
-        [
-          'email' => 'required|email|max:100',
-          'password' => 'required|min:6'
-        ],
-        [
-          'email.required' => 'Email không được bỏ trống',
-          'email.email' => 'Email không phù hợp',
-          'email.max' => 'Email không được vượt quá :max ký tự',
-          'password.required' => 'Mật khẩu không được bỏ trống',
-          'password.min' => 'Mật khẩu từ :min ký tự trở lên',
-        ]
-      );
   
+      $formData = [
+        'email' => $request->email,
+        'password' => $request->password
+      ];
+
       $account = Account::where('email', '=', $formData['email'])->first();
-      if(!$account->status) return redirect()->route('login')->with('form-message', 'Email hoặc mật khẩu không chính xác');
+
+      if($account && !$account->status) return redirect()->route('login')->with('form-message', 'Email hoặc mật khẩu không chính xác');
   
       if (Auth::attempt($formData)) {
       
@@ -53,6 +59,7 @@ class AuthController extends Controller
   
         return redirect()->route('dashboard');
       }
+
       else {
         return redirect()->route('login')->with('form-message', 'Email hoặc mật khẩu không chính xác');
       }

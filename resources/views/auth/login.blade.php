@@ -13,6 +13,12 @@
 
   <x-form-message></x-form-message>
 
+  <div class="p-3 mb-3 text-light" style="background-color: #4B49AC; font-size: 12px;">
+    <div class="mb-1">Tài khoản giáo vụ: nv2@gmail.com / MK: 123456</div>
+    <div class="mb-1">Tài khoản giáo viên: gv1@gmail.com / MK: 123456</div>
+    <div class="mb-1">Tài khoản học sinh: hs1@gmail.com / MK: 123456</div>
+  </div>
+
   <div class="form-group login-formGroup">
     <i class="fa-solid fa-user"></i>
     <input 

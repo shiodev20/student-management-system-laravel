@@ -22,8 +22,7 @@ class StudentController extends Controller
     try {
       session()->forget(['search_info', 'search_type']);
 
-      $students = Student
-        ::orderBy('enroll_date', 'desc')->paginate(10);
+      $students = Student::orderBy('enroll_date', 'desc')->paginate(10);
 
       $currentYear = Year::getCurrentYear();
       $currentSemester = Semester::getCurrentSemester();
@@ -41,7 +40,7 @@ class StudentController extends Controller
   }
 
 
-  public function store(StudentRequest $request) {  
+  public function store(StudentRequest $request) {
 
     try {
       $studentId = GenerateId::generateId('HS', 6);
