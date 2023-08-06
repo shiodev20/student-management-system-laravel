@@ -1,6 +1,6 @@
 # ShioSMS - Ứng dụng quản lý học sinh
 
-Link demo: [ShioSMS](https://shiobook-ebook-downloader.tech/)
+Link demo: [ShioSMS](https://shiosms-student-management-system.tech/)
 
 ## Actor hệ thống
 - Giáo vụ
