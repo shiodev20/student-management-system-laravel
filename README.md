@@ -1,4 +1,4 @@
-# ShioSMS - Ứng dụng quản lý học sinh
+# ShioSMS - Ứng dụng quản lý học sinh THPT
 
 Link demo: [ShioSMS](https://shiosms-student-management-system.tech/)
 
